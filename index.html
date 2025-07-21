@@ -14,20 +14,20 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #fefefe;
+      background: linear-gradient(135deg, #f8f9fd, #e8ebf6);
       color: #333;
       line-height: 1.8;
     }
 
     header {
-      background-color: #111;
+      background: #111;
       color: #fff;
       padding: 2rem 1rem;
       text-align: center;
     }
 
     header h1 {
-      font-size: 2.2rem;
+      font-size: 2.3rem;
       margin-bottom: 0.5rem;
     }
 
@@ -36,18 +36,33 @@
       text-decoration: none;
       margin: 0 1rem;
       font-weight: 600;
+      font-size: 1rem;
     }
 
     section {
-      padding: 4rem 2rem;
+      padding: 4rem 1.5rem;
       max-width: 900px;
       margin: auto;
     }
 
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+      padding: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
     h2 {
       font-size: 2rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;
       color: #222;
+    }
+
+    h3 {
+      margin-top: 1.8rem;
+      font-size: 1.2rem;
+      color: #444;
     }
 
     p {
@@ -63,14 +78,6 @@
       margin-bottom: 0.75rem;
     }
 
-    .results {
-      background: #f9f9f9;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 2rem;
-      margin-top: 2rem;
-    }
-
     .results ul {
       list-style: none;
       padding: 0;
@@ -79,10 +86,15 @@
     .results li {
       margin-bottom: 1rem;
       font-size: 1.1rem;
+      position: relative;
+      padding-left: 1.5rem;
     }
 
     .results li::before {
-      content: '✨ ';
+      content: '✔️';
+      position: absolute;
+      left: 0;
+      top: 0;
     }
 
     .screenshots-placeholder {
@@ -93,12 +105,7 @@
       font-style: italic;
       margin-top: 2rem;
       border-radius: 8px;
-    }
-
-    .divider {
-      height: 2px;
-      background: #eee;
-      margin: 4rem 0;
+      background: #fdfdfd;
     }
 
     footer {
@@ -109,8 +116,9 @@
     }
 
     @media (max-width: 600px) {
-      header h1 { font-size: 1.7rem; }
+      header h1 { font-size: 1.8rem; }
       nav a { display: inline-block; margin: 0.5rem 0; }
+      .card { padding: 2rem; }
     }
   </style>
 </head>
@@ -127,60 +135,61 @@
   </header>
 
   <section id="about">
-    <h2>About Us</h2>
-    <p>We’re a boutique management agency helping female creators grow their OnlyFans revenue while keeping their sanity. We believe in authentic conversion, smart scaling, and tailored strategy — no recycled scripts or mass-automation.</p>
-    <p>We focus on what matters: deep fan engagement, clean backend organization, and custom revenue planning. Whether you're building your brand or scaling to 5-figures monthly, we’re here for it — and we’ll handle the hard parts so you don’t have to.</p>
-    <p>Gleam Management is built on transparency, strategy, and results. If you're looking for a team that knows how to grow OnlyFans accounts with intention — not just volume — you’ve found it.</p>
+    <div class="card">
+      <h2>About Us</h2>
+      <p>We’re a boutique management agency helping female creators grow their OnlyFans revenue while keeping their sanity. We believe in authentic conversion, smart scaling, and tailored strategy — no recycled scripts or mass-automation.</p>
+      <p>We focus on what matters: deep fan engagement, clean backend organization, and custom revenue planning. Whether you're building your brand or scaling to 5-figures monthly, we’re here for it — and we’ll handle the hard parts so you don’t have to.</p>
+      <p>Gleam Management is built on transparency, strategy, and results. If you're looking for a team that knows how to grow OnlyFans accounts with intention — not just volume — you’ve found it.</p>
+    </div>
   </section>
-
-  <div class="divider"></div>
 
   <section id="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li>💬 7-day active chatting & fan conversion</li>
-      <li>📝 High-converting mass message & PPV scripts</li>
-      <li>📅 Custom content planning (based on your vibe)</li>
-      <li>📊 Smart pricing, renewals & revenue testing</li>
-      <li>📈 Weekly analytics & performance reviews</li>
-      <li>🤝 Full onboarding, strategy call, and personal support</li>
-    </ul>
-  </section>
-
-  <div class="divider"></div>
-
-  <section id="results">
-    <h2>Our Results</h2>
-    <p>We don’t just promise results — we show them.</p>
-    <div class="results">
+    <div class="card">
+      <h2>Our Services</h2>
       <ul>
-        <li>$1,200 → $5,800/month in just 30 days</li>
-        <li>450% boost in message revenue</li>
-        <li>Over 60% subscriber renewal rate</li>
+        <li>💬 7-day active chatting & fan conversion</li>
+        <li>📝 High-converting mass message & PPV scripts</li>
+        <li>📅 Custom content planning (based on your vibe)</li>
+        <li>📊 Smart pricing, renewals & revenue testing</li>
+        <li>📈 Weekly analytics & performance reviews</li>
+        <li>🤝 Full onboarding, strategy call, and personal support</li>
       </ul>
     </div>
+  </section>
 
-    <div class="screenshots-placeholder">
-      [Leave space here for uploading before/after performance screenshots]
+  <section id="results">
+    <div class="card">
+      <h2>Our Results</h2>
+      <p>We don’t just promise results — we show them.</p>
+      <div class="results">
+        <ul>
+          <li>$1,200 → $5,800/month in just 30 days</li>
+          <li>450% boost in message revenue</li>
+          <li>Over 60% subscriber renewal rate</li>
+        </ul>
+      </div>
+      <div class="screenshots-placeholder">
+        [Leave space here for uploading before/after performance screenshots]
+      </div>
     </div>
   </section>
 
-  <div class="divider"></div>
-
   <section id="faq">
-    <h2>FAQ</h2>
+    <div class="card">
+      <h2>FAQ</h2>
 
-    <h3>🟡 How do I get started?</h3>
-    <p>Just send us your OF link and a short message — we’ll book a call to discuss fit and onboarding.</p>
+      <h3>🟡 How do I get started?</h3>
+      <p>Just send us your OF link and a short message — we’ll book a call to discuss fit and onboarding.</p>
 
-    <h3>🟡 Is it revenue share or flat fee?</h3>
-    <p>Both options are possible. We'll agree upfront based on your current volume and goals.</p>
+      <h3>🟡 Is it revenue share or flat fee?</h3>
+      <p>Both options are possible. We'll agree upfront based on your current volume and goals.</p>
 
-    <h3>🟡 Do I still control my fans?</h3>
-    <p>Yes! You can choose to handle top fans or customs directly. We're here to support, not take over.</p>
+      <h3>🟡 Do I still control my fans?</h3>
+      <p>Yes! You can choose to handle top fans or customs directly. We're here to support, not take over.</p>
 
-    <h3>🟡 How fast is onboarding?</h3>
-    <p>2–3 days. We make it easy with a clear checklist and 1:1 setup support.</p>
+      <h3>🟡 How fast is onboarding?</h3>
+      <p>2–3 days. We make it easy with a clear checklist and 1:1 setup support.</p>
+    </div>
   </section>
 
   <footer>
