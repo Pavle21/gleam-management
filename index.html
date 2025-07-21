@@ -4,15 +4,114 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gleam Management</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #fff; color: #333; scroll-behavior: smooth; }
-    header, footer { background: #222; color: #fff; text-align: center; padding: 1rem; }
-    nav a { color: #ffd700; margin: 0 12px; text-decoration: none; font-weight: bold; }
-    section { padding: 3rem 1rem; max-width: 800px; margin: auto; }
-    h1, h2 { color: #111; margin-top: 0; }
-    ul { list-style: none; padding-left: 0; }
-    li { margin-bottom: 1rem; }
-    .divider { margin: 3rem 0; height: 2px; background: #eee; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fefefe;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    header {
+      background-color: #111;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    nav a {
+      color: #ffcc00;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #222;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    ul li {
+      margin-bottom: 0.75rem;
+    }
+
+    .results {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    .results ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .results li {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .results li::before {
+      content: '✨ ';
+    }
+
+    .screenshots-placeholder {
+      border: 2px dashed #bbb;
+      padding: 4rem;
+      text-align: center;
+      color: #666;
+      font-style: italic;
+      margin-top: 2rem;
+      border-radius: 8px;
+    }
+
+    .divider {
+      height: 2px;
+      background: #eee;
+      margin: 4rem 0;
+    }
+
+    footer {
+      background-color: #111;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.7rem; }
+      nav a { display: inline-block; margin: 0.5rem 0; }
+    }
   </style>
 </head>
 <body>
@@ -29,10 +128,9 @@
 
   <section id="about">
     <h2>About Us</h2>
-    <p>We’re a boutique management agency focused on helping female creators grow their OnlyFans revenue while keeping their sanity. We don’t just chat — we build brands and results.</p>
-    <p>Our mission is to empower you to focus on what you love — creating — while we handle chatting, strategy, pricing, and scaling. We’ve helped creators from all over the world grow their earnings with authentic fan conversion and custom gameplans.</p>
-    <p>We don’t believe in cookie-cutter systems. Your style is unique, and we tailor everything — from scripts to content planning — to make sure it feels like you. If you're tired of agencies that overpromise and underdeliver, you’ve found the right place.</p>
-    <p>Our small team gives personal support, strategic feedback, and full transparency. Whether you're scaling from $1k to $5k or $10k to $30k, we’re with you every step of the way.</p>
+    <p>We’re a boutique management agency helping female creators grow their OnlyFans revenue while keeping their sanity. We believe in authentic conversion, smart scaling, and tailored strategy — no recycled scripts or mass-automation.</p>
+    <p>We focus on what matters: deep fan engagement, clean backend organization, and custom revenue planning. Whether you're building your brand or scaling to 5-figures monthly, we’re here for it — and we’ll handle the hard parts so you don’t have to.</p>
+    <p>Gleam Management is built on transparency, strategy, and results. If you're looking for a team that knows how to grow OnlyFans accounts with intention — not just volume — you’ve found it.</p>
   </section>
 
   <div class="divider"></div>
@@ -42,9 +140,9 @@
     <ul>
       <li>💬 7-day active chatting & fan conversion</li>
       <li>📝 High-converting mass message & PPV scripts</li>
-      <li>🧠 Custom content planning (based on your vibe)</li>
+      <li>📅 Custom content planning (based on your vibe)</li>
       <li>📊 Smart pricing, renewals & revenue testing</li>
-      <li>📈 Analytics + weekly performance reviews</li>
+      <li>📈 Weekly analytics & performance reviews</li>
       <li>🤝 Full onboarding, strategy call, and personal support</li>
     </ul>
   </section>
@@ -53,35 +151,40 @@
 
   <section id="results">
     <h2>Our Results</h2>
-    <p>We helped creators grow from:</p>
-    <ul>
-      <li>💸 $1,200 → $5,800/month in just 30 days</li>
-      <li>🚀 450% boost in message revenue</li>
-      <li>🔁 +60% subscriber renewal rate</li>
-    </ul>
-    <p><strong>Screenshots coming soon.</strong> You’ll be able to see actual dashboards and transformations here soon.</p>
+    <p>We don’t just promise results — we show them.</p>
+    <div class="results">
+      <ul>
+        <li>$1,200 → $5,800/month in just 30 days</li>
+        <li>450% boost in message revenue</li>
+        <li>Over 60% subscriber renewal rate</li>
+      </ul>
+    </div>
+
+    <div class="screenshots-placeholder">
+      [Leave space here for uploading before/after performance screenshots]
+    </div>
   </section>
 
   <div class="divider"></div>
 
   <section id="faq">
-    <h2>Frequently Asked Questions</h2>
+    <h2>FAQ</h2>
 
-    <h3>How do I get started?</h3>
-    <p>Just reach out with your OnlyFans link and a short intro. We’ll set up a quick call to see if we’re a match.</p>
+    <h3>🟡 How do I get started?</h3>
+    <p>Just send us your OF link and a short message — we’ll book a call to discuss fit and onboarding.</p>
 
-    <h3>Do you take a percentage or charge a flat fee?</h3>
-    <p>We offer both — depending on your volume and needs. Everything is transparent and agreed on before we start.</p>
+    <h3>🟡 Is it revenue share or flat fee?</h3>
+    <p>Both options are possible. We'll agree upfront based on your current volume and goals.</p>
 
-    <h3>Can I keep chatting with my VIP fans?</h3>
-    <p>Yes! You can handle your top fans, customs, or anything personal. We work around your boundaries.</p>
+    <h3>🟡 Do I still control my fans?</h3>
+    <p>Yes! You can choose to handle top fans or customs directly. We're here to support, not take over.</p>
 
-    <h3>How long does onboarding take?</h3>
-    <p>2–3 days. We make sure everything is set up without slowing you down.</p>
+    <h3>🟡 How fast is onboarding?</h3>
+    <p>2–3 days. We make it easy with a clear checklist and 1:1 setup support.</p>
   </section>
 
   <footer>
-    &copy; 2025 Gleam Management. Built with care.
+    &copy; 2025 Gleam Management. Built with intention.
   </footer>
 
 </body>
